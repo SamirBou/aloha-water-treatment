@@ -48,7 +48,7 @@ class BACnetClient(HMIClientInterface):
         """
         Set the emergency stop bit to the given value
         """
-        return self.__write_value(obj_type   ='binaryValue',
+        return self._write_to_server(obj_type   ='binaryValue',
                                   instance   =1,
                                   write_value='active' if value else 'inactive')
 
